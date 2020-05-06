@@ -1,10 +1,10 @@
 # generator_of_crossword
 
-## Описание
+## Description
 
 This framework generate classic crossword
 
-## Пример
+## Example
 
 ```csharp
 
@@ -14,12 +14,12 @@ crossWord.Generate();
 
 char?[,] Field = crossWord.Field;
 
-if ( Directory.Exists("Результат") == false)
+if ( Directory.Exists("Result") == false)
 {
     Directory.CreateDirectory("Результат");
 }
 
-using ( StreamWriter streamOpen = new StreamWriter("Результат/Использованные_слова.txt") )
+using ( StreamWriter streamOpen = new StreamWriter("Result/Used_words.txt") )
 {
     foreach ( string item in crossWord.ListOfUseWords )
     {
@@ -27,7 +27,7 @@ using ( StreamWriter streamOpen = new StreamWriter("Результат/Испо�
     }
 }
 
-using ( StreamWriter streamOpen = new StreamWriter("Результат/Не_использованные_слова.txt") )
+using ( StreamWriter streamOpen = new StreamWriter("Result/Not_used_words.txt") )
 {
     foreach ( string item in crossWord.ListOfExcessWords )
     {
@@ -35,7 +35,7 @@ using ( StreamWriter streamOpen = new StreamWriter("Результат/Не_ис
     }
 }
 
-using ( StreamWriter streamOpen = new StreamWriter(new FileStream("Результат/Кроссворд.csv", FileMode.Create), Encoding.Default) )
+using ( StreamWriter streamOpen = new StreamWriter(new FileStream("Result/Crossword.csv", FileMode.Create), Encoding.Default) )
 {
     for ( int x = 0; x < Field.GetLength(0); x++ )
     {
