@@ -16,7 +16,7 @@ char?[,] Field = crossWord.Field;
 
 if ( Directory.Exists("Result") == false)
 {
-    Directory.CreateDirectory("Результат");
+    Directory.CreateDirectory("Result");
 }
 
 using ( StreamWriter streamOpen = new StreamWriter("Result/Used_words.txt") )
