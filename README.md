@@ -2,7 +2,7 @@
 
 ## Description
 
-This framework generate classic crossword
+Данный фреймворк генерирует классический кроссворд
 
 ## Example
 
